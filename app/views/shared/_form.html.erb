@@ -1,0 +1,19 @@
+<% if flash[:errors] %>
+	<p>There are <%= pluralize flash[:errors].length, "error" %>:</p>
+	<% flash[:errors].each do |e| %>
+		<li><%= e %></li>
+	<% end %>
+<% end %>
+
+<%= form_for @pokemon do |f| %>
+	<p>
+  		<%= f.label :name %>:
+  		<%= f.text_field :name %>
+	</p>
+	<p>
+  		<%= f.label :element %>:
+  		<%= f.text_field :element %>
+		
+	</p>
+  	<%= f.submit %>
+<% end %>

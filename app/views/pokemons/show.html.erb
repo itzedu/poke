@@ -1,0 +1,8 @@
+<% content_for(:title, @pokemon.name) %>
+
+<h1>Profile Page</h1>
+
+<p>Name: <%= @pokemon.name %></p>
+<p>Element: <%= @pokemon.element %></p>
+
+<a href="/pokemons/<%= @pokemon.id %>/edit">Edit</a>

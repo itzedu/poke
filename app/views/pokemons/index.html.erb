@@ -1,0 +1,10 @@
+<% content_for(:title, "Pokemons") %>
+<h1>There are <%= pluralize @pokemons.length, "Pokemon" %></h1>
+
+<ul>
+<% @pokemons.each do |p| %>
+	<li><a href="/pokemons/<%= p.id %>"><%= p.name %></a> | Element: <%= element(p) %> | <a data-method="delete" href="/pokemons/<%= p.id %>">Delete Pokemon</a></li>
+<% end %>	
+</ul>
+
+<%= link_to "New Pokemon", pokemons_new_path %>

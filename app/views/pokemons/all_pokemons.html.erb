@@ -1,0 +1,9 @@
+<h1>Hello World</h1>
+
+<h2 id="hello-test">Hello</h2>
+
+<% @pokemons.each do |p| %>
+	<p>
+		Name: <%= p.pokemon_name %> | Trainer: <%= p.trainer_name %>
+	</p>
+<% end %>
